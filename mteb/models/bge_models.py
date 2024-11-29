@@ -1,8 +1,74 @@
 from __future__ import annotations
 
+from collections.abc import Sequence
 from functools import partial
+from typing import Any, Literal
+
+import numpy as np
+import torch
 
 from mteb.model_meta import ModelMeta, sentence_transformers_loader
+from mteb.requires_package import requires_package
+
+from .wrapper import Wrapper
+
+BGE_M3_SUPPORTING_LANGUAGES = []
+
+
+class BGEM3Wrapper(Wrapper):
+    def __init__(
+        self,
+        model: str,
+        type: Literal["dense", "sparse", "multi_vector"] | None = None,
+        revision: str | None = None,
+        **kwargs,
+    ) -> None:
+        requires_package(self, "FlagEmbedding", "FlagEmbedding")
+        from FlagEmbedding import BGEM3FlagModel
+
+        if isinstance(model, str):
+            self.model = BGEM3FlagModel(model, **kwargs)
+        else:
+            self.model = model
+        self.type = type
+
+    def encode(self, sentences: Sequence[str], **kwargs) -> np.ndarray:
+        embeddings = None
+        if self.type == "dense":
+            embeddings = self.model.encode(sentences, **kwargs)
+        elif self.type == "sparse":
+            embeddings = self.model.encode(
+                sentences,
+                return_dense=True,
+                return_sparse=True,
+                return_colbert_vecs=False,
+                **kwargs,
+            )
+        elif self.type == "multi_vector":
+            embeddings = self.model.encode(
+                sentences,
+                return_dense=True,
+                return_sparse=True,
+                return_colbert_vecs=True,
+                **kwargs,
+            )
+
+        if isinstance(embeddings, torch.Tensor):
+            # sometimes in kwargs can be return_tensors=True
+            embeddings = embeddings.cpu().detach().float().numpy()
+        return embeddings
+
+    def _predict(
+        self,
+        sentences: Sequence[str],
+        **kwargs: Any,
+    ) -> np.ndarray:
+        return self.model.predict(
+            sentences,
+            convert_to_numpy=True,
+            **kwargs,
+        )
+
 
 model_prompts = {"query": "Represent this sentence for searching relevant passages: "}
 
@@ -72,5 +138,59 @@ bge_large_en_v1_5 = ModelMeta(
     reference="https://huggingface.co/BAAI/bge-large-en-v1.5",
     similarity_fn_name="cosine",
     framework=["Sentence Transformers", "PyTorch"],
+    use_instructions=False,
+)
+
+bge_m3_dense = ModelMeta(
+    loader=partial(BGEM3Wrapper, model="BAAI/bge-m3", type="dense"),
+    name="BAAI/bge-m3",
+    languages=BGE_M3_SUPPORTING_LANGUAGES,
+    open_weights=True,
+    revision="5617a9f61b028005a4858fdac845db406aefb181",
+    release_date="2024-01-30",
+    n_parameters=560_000_000,
+    memory_usage=None,
+    embed_dim=1024,
+    license="mit",
+    max_tokens=512,
+    reference="https://huggingface.co/BAAI/bge-m3",
+    similarity_fn_name="cosine",
+    framework=["FlagEmbedding"],
+    use_instructions=False,
+)
+
+bge_m3_sparse = ModelMeta(
+    loader=partial(BGEM3Wrapper, model="BAAI/bge-m3", type="sparse"),
+    name="BAAI/bge-m3",
+    languages=BGE_M3_SUPPORTING_LANGUAGES,
+    open_weights=True,
+    revision="5617a9f61b028005a4858fdac845db406aefb181",
+    release_date="2024-01-30",
+    n_parameters=560_000_000,
+    memory_usage=None,
+    embed_dim=1024,
+    license="mit",
+    max_tokens=512,
+    reference="https://huggingface.co/BAAI/bge-m3",
+    similarity_fn_name="cosine",
+    framework=["FlagEmbedding"],
+    use_instructions=False,
+)
+
+bge_m3_multi_vector = ModelMeta(
+    loader=partial(BGEM3Wrapper, model="BAAI/bge-m3", type="multi_vector"),
+    name="BAAI/bge-m3",
+    languages=BGE_M3_SUPPORTING_LANGUAGES,
+    open_weights=True,
+    revision="5617a9f61b028005a4858fdac845db406aefb181",
+    release_date="2024-01-30",
+    n_parameters=560_000_000,
+    memory_usage=None,
+    embed_dim=1024,
+    license="mit",
+    max_tokens=512,
+    reference="https://huggingface.co/BAAI/bge-m3",
+    similarity_fn_name="cosine",
+    framework=["FlagEmbedding"],
     use_instructions=False,
 )
