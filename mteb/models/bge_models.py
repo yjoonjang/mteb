@@ -143,7 +143,7 @@ bge_large_en_v1_5 = ModelMeta(
 
 bge_m3_dense = ModelMeta(
     loader=partial(BGEM3Wrapper, model="BAAI/bge-m3", type="dense"),
-    name="BAAI/bge-m3",
+    name="BAAI/bge-m3/dense",
     languages=BGE_M3_SUPPORTING_LANGUAGES,
     open_weights=True,
     revision="5617a9f61b028005a4858fdac845db406aefb181",
@@ -161,7 +161,7 @@ bge_m3_dense = ModelMeta(
 
 bge_m3_sparse = ModelMeta(
     loader=partial(BGEM3Wrapper, model="BAAI/bge-m3", type="sparse"),
-    name="BAAI/bge-m3",
+    name="BAAI/bge-m3/sparse",
     languages=BGE_M3_SUPPORTING_LANGUAGES,
     open_weights=True,
     revision="5617a9f61b028005a4858fdac845db406aefb181",
@@ -179,7 +179,7 @@ bge_m3_sparse = ModelMeta(
 
 bge_m3_multi_vector = ModelMeta(
     loader=partial(BGEM3Wrapper, model="BAAI/bge-m3", type="multi_vector"),
-    name="BAAI/bge-m3",
+    name="BAAI/bge-m3/multi_vector",
     languages=BGE_M3_SUPPORTING_LANGUAGES,
     open_weights=True,
     revision="5617a9f61b028005a4858fdac845db406aefb181",
