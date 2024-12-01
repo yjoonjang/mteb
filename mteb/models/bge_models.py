@@ -33,16 +33,23 @@ class BGEM3Wrapper(Wrapper):
         self.type = type
 
     def encode(self, sentences: Sequence[str], **kwargs) -> np.ndarray:
+        print("Encode kwargs:", kwargs)  # Print the kwargs dictionary
+        
         embeddings = None
         if self.type == "dense":
-            embeddings = self.model.encode(sentences, **kwargs)
+            embeddings = self.model.encode(
+                sentences,
+                batch_size=kwargs.get("batch_size", 1),
+                # **kwargs,
+            )
         elif self.type == "sparse":
             embeddings = self.model.encode(
                 sentences,
                 return_dense=True,
                 return_sparse=True,
                 return_colbert_vecs=False,
-                **kwargs,
+                batch_size=kwargs.get("batch_size", 1),
+                # **kwargs,
             )
         elif self.type == "multi_vector":
             embeddings = self.model.encode(
@@ -50,7 +57,8 @@ class BGEM3Wrapper(Wrapper):
                 return_dense=True,
                 return_sparse=True,
                 return_colbert_vecs=True,
-                **kwargs,
+                batch_size=kwargs.get("batch_size", 1),
+                # **kwargs,
             )
 
         if isinstance(embeddings, torch.Tensor):
