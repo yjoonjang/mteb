@@ -43,6 +43,7 @@ class BGEM3Wrapper(Wrapper):
                 # **kwargs,
             )
         elif self.type == "sparse":
+            print("Sparse")
             embeddings = self.model.encode(
                 sentences,
                 return_dense=True,
@@ -51,6 +52,7 @@ class BGEM3Wrapper(Wrapper):
                 batch_size=kwargs.get("batch_size", 1),
                 # **kwargs,
             )
+            print("Sparse embeddings:", embeddings)
         elif self.type == "multi_vector":
             embeddings = self.model.encode(
                 sentences,
