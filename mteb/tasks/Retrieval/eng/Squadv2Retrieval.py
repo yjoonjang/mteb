@@ -18,7 +18,7 @@ class Squadv2Retrieval(AbsTaskRetrieval):
         type="Retrieval",
         category="s2s",
         modalities=["text"],
-        eval_splits=["test"],
+        eval_splits=["dev"],
         eval_langs=["eng-Latn"],
         main_score="ndcg_at_10",
         date=("2023-01-01", "2023-12-31"),
