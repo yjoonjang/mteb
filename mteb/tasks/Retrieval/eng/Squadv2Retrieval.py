@@ -9,7 +9,7 @@ class Squadv2Retrieval(AbsTaskRetrieval):
     metadata = TaskMetadata(
         name="Squadv2Retrieval",
         description="from squad v2",
-        reference="yjoonjang/squad_v2",
+        reference="https://huggingface.co/datasets/yjoonjang/squad_v2",
         dataset={
             "path": "yjoonjang/squad_v2",
             "revision": "a027dc128e687cd55c6b4f05672c9d4cfc2924db",
