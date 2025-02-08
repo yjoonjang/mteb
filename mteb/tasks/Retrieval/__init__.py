@@ -92,6 +92,7 @@ from .eng.SCIDOCSRetrieval import *
 from .eng.SciFactRetrieval import *
 from .eng.SiqaRetrieval import *
 from .eng.SpartQARetrieval import *
+from .eng.Squadv2Retrieval import *
 from .eng.TempReasonL1Retrieval import *
 from .eng.TempReasonL2ContextRetrieval import *
 from .eng.TempReasonL2FactRetrieval import *
