@@ -66,6 +66,7 @@ from .eng.LitSearchRetrieval import *
 from .eng.MedicalQARetrieval import *
 from .eng.MLQuestions import *
 from .eng.MSMARCORetrieval import *
+from .eng.MSMARCOv1_1validRetrieval import *
 from .eng.MSMARCOv2Retrieval import *
 from .eng.NanoArguAnaRetrieval import *
 from .eng.NanoClimateFeverRetrieval import *
