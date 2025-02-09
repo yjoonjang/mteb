@@ -10,7 +10,7 @@ class MSMARCOv1_1validRetrieval(AbsTaskRetrieval):
         name="MSMARCOv1_1valid",
         dataset={
             "path": "yjoonjang/ms_marco",
-            "revision": "ce786efa4a7350fa90a72534526ef47d474e5c21",
+            "revision": "39257a1cbe66a42cbcd43295ecab5c2c18970734",
         },
         description="MS MARCO is a collection of datasets focused on deep learning in search",
         reference="https://microsoft.github.io/msmarco/TREC-Deep-Learning.html",
