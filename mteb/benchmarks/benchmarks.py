@@ -200,7 +200,7 @@ MTEB_ENG_CLASSIC = Benchmark(
             languages=["eng"],
             eval_splits=["test"],
         )
-        + get_tasks(tasks=["MSMARCO"], languages=["eng"], eval_splits=["dev"])
+        + get_tasks(tasks=["MSMARCOv2"], languages=["eng"], eval_splits=["dev"])
         + (
             get_task(
                 "AmazonCounterfactualClassification",
@@ -1184,7 +1184,7 @@ BEIR = Benchmark(
             "SciFact",
         ],
     )
-    + get_tasks(tasks=["MSMARCO"], languages=["eng"], eval_splits=["dev"]),
+    + get_tasks(tasks=["MSMARCOv2"], languages=["eng"], eval_splits=["dev"]),
     description="BEIR is a heterogeneous benchmark containing diverse IR tasks. It also provides a common and easy framework for evaluation of your NLP-based retrieval models within the benchmark.",
     reference="https://arxiv.org/abs/2104.08663",
     citation="""@article{thakur2021beir,

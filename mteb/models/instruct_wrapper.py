@@ -118,6 +118,7 @@ class InstructSentenceTransformerWrapper(Wrapper):
             )
 
         self.model_name = model_name
+        kwargs.pop("model", None)
         self.model = SentenceTransformer(model_name, revision=revision, **kwargs)
         self.instruction_template = instruction_template
         self.apply_instruction_to_passages = apply_instruction_to_passages

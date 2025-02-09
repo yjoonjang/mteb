@@ -64,6 +64,7 @@ from .eng.LEMBSummScreenFDRetrieval import *
 from .eng.LEMBWikimQARetrieval import *
 from .eng.LitSearchRetrieval import *
 from .eng.MedicalQARetrieval import *
+from .eng.MusiQueRetrieval import *
 from .eng.MLQuestions import *
 from .eng.MSMARCORetrieval import *
 from .eng.MSMARCOv1_1validRetrieval import *
