@@ -135,7 +135,7 @@ class ModelMeta(BaseModel):
         else:
             loader = self.loader
 
-        model: Encoder = loader(**kwargs)  # type: ignore
+        model: Encoder = loader(model_name=self.name, **kwargs)  # type: ignore
         model.mteb_model_meta = self
         return model
 
