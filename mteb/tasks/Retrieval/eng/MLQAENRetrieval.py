@@ -4,9 +4,9 @@ from mteb.abstasks.AbsTaskRetrieval import AbsTaskRetrieval
 from mteb.abstasks.TaskMetadata import TaskMetadata
 
 
-class MLQARetrieval(AbsTaskRetrieval):
+class MLQAENRetrieval(AbsTaskRetrieval):
     metadata = TaskMetadata(
-        name="MLQARetrieval",
+        name="MLQAENRetrieval",
         dataset={
             "path": "yjoonjang/mlqa",
             "revision": "88718673ec454b72afd285ce3ea81d9772878044",
