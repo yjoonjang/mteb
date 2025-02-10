@@ -1,8 +1,7 @@
 from __future__ import annotations
 
+from mteb.abstasks.AbsTaskRetrieval import AbsTaskRetrieval
 from mteb.abstasks.TaskMetadata import TaskMetadata
-
-from .......mteb.mteb.abstasks.AbsTaskRetrieval import AbsTaskRetrieval
 
 
 class BoolQ_ragsolutedRetrieval(AbsTaskRetrieval):
