@@ -108,6 +108,8 @@ from .eng.TopiOCQARetrieval import *
 from .eng.Touche2020Retrieval import *
 from .eng.TRECCOVIDRetrieval import *
 from .eng.WinoGrandeRetrieval import *
+from .eng.IFQARetrieval import *
+from .eng.SciqRetrieval import *
 from .est.estqa import *
 from .fas.BEIRFa import *
 from .fas.FaMTEBRetrieval import *
