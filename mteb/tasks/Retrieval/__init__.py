@@ -68,6 +68,7 @@ from .eng.MusiQueRetrieval import *
 from .eng.MLQuestions import *
 from .eng.MSMARCORetrieval import *
 from .eng.MSMARCOv1_1validRetrieval import *
+from .eng.MSMARCOv1_1valid_ragsolutedRetrieval import *
 from .eng.MSMARCOv2Retrieval import *
 from .eng.NanoArguAnaRetrieval import *
 from .eng.NanoClimateFeverRetrieval import *
@@ -95,6 +96,7 @@ from .eng.SciFactRetrieval import *
 from .eng.SiqaRetrieval import *
 from .eng.SpartQARetrieval import *
 from .eng.Squadv2Retrieval import *
+from .eng.Squadv2_ragsolutedRetrieval import *
 from .eng.TempReasonL1Retrieval import *
 from .eng.TempReasonL2ContextRetrieval import *
 from .eng.TempReasonL2FactRetrieval import *
