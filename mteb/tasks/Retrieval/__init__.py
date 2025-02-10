@@ -112,6 +112,7 @@ from .eng.WinoGrandeRetrieval import *
 from .eng.IFQARetrieval import *
 from .eng.SciqRetrieval import *
 from .eng.BoolQ_ragsolutedRetrieval import *
+from .eng.Belebele_ragsolutedRetrieval import *
 from .eng.MLQAENRetrieval import *
 from .est.estqa import *
 from .fas.BEIRFa import *
