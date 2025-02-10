@@ -101,6 +101,7 @@ from .eng.TempReasonL1Retrieval import *
 from .eng.TempReasonL2ContextRetrieval import *
 from .eng.TempReasonL2FactRetrieval import *
 from .eng.TempReasonL2PureRetrieval import *
+from .eng.BoolQRetrieval import *
 from .eng.TempReasonL3ContextRetrieval import *
 from .eng.TempReasonL3FactRetrieval import *
 from .eng.TempReasonL3PureRetrieval import *
