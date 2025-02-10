@@ -114,6 +114,7 @@ from .eng.SciqRetrieval import *
 from .eng.BoolQ_ragsolutedRetrieval import *
 from .eng.Belebele_ragsolutedRetrieval import *
 from .eng.MLQAENRetrieval import *
+from .eng.NQ_simplifiedRetrieval import *
 from .est.estqa import *
 from .fas.BEIRFa import *
 from .fas.FaMTEBRetrieval import *
