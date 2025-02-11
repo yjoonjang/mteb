@@ -24,6 +24,7 @@ from .deu.GermanGovServiceRetrieval import *
 from .deu.GermanQuADRetrieval import *
 from .deu.LegalQuADRetrieval import *
 from .ell.GreekCivicsQA import *
+from .eng.NanoMSMARCO_ragsolutedRetrieval import *
 from .eng.AILACasedocsRetrieval import *
 from .eng.AILAStatutesRetrieval import *
 from .eng.AlphaNLIRetrieval import *
