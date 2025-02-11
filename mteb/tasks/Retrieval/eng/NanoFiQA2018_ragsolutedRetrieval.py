@@ -48,17 +48,17 @@ url={https://openreview.net/forum?id=wCu6T5xFjeJ}
             return
 
         self.corpus = load_dataset(
-            "zeta-alpha-ai/NanoFiQA2018",
+            "yjoonjang/nanofiqa_ragsoluted",
             "corpus",
             revision="4163ba032953d5044a7a6244261413f609c14342",
         )
         self.queries = load_dataset(
-            "zeta-alpha-ai/NanoFiQA2018",
+            "yjoonjang/nanofiqa_ragsoluted",
             "queries",
             revision="4163ba032953d5044a7a6244261413f609c14342",
         )
         self.relevant_docs = load_dataset(
-            "zeta-alpha-ai/NanoFiQA2018",
+            "yjoonjang/nanofiqa_ragsoluted",
             "qrels",
             revision="4163ba032953d5044a7a6244261413f609c14342",
         )
