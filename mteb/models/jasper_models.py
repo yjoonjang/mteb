@@ -74,7 +74,7 @@ jasper_en_v1 = ModelMeta(
         max_seq_length=2048,
         instruction_template="Instruct: {instruction}\nQuery: ",
     ),
-    name="NovaSearch/jasper_en_vision_language_v1",
+    name="",
     languages=["eng-Latn"],
     open_weights=True,
     revision="d6330ce98f8a0d741e781df845904c9484f00efa",
