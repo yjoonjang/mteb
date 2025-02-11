@@ -50,17 +50,17 @@ url={https://openreview.net/forum?id=wCu6T5xFjeJ}
         self.corpus = load_dataset(
             "yjoonjang/nanofiqa_ragsoluted",
             "corpus",
-            revision="4163ba032953d5044a7a6244261413f609c14342",
+            revision="ac87af769125d6a51fbda9ceab1d92945f844b03",
         )
         self.queries = load_dataset(
             "yjoonjang/nanofiqa_ragsoluted",
             "queries",
-            revision="4163ba032953d5044a7a6244261413f609c14342",
+            revision="ac87af769125d6a51fbda9ceab1d92945f844b03",
         )
         self.relevant_docs = load_dataset(
             "yjoonjang/nanofiqa_ragsoluted",
             "qrels",
-            revision="4163ba032953d5044a7a6244261413f609c14342",
+            revision="ac87af769125d6a51fbda9ceab1d92945f844b03",
         )
 
         self.corpus = {
