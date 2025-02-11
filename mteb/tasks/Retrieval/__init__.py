@@ -116,6 +116,7 @@ from .eng.Belebele_ragsolutedRetrieval import *
 from .eng.MLQAENRetrieval import *
 from .eng.MLQAEN_ragsolutedRetrieval import *
 from .eng.NQ_simplifiedRetrieval import *
+from .eng.NanoFiQA2018_ragsolutedRetrieval import *
 from .est.estqa import *
 from .fas.BEIRFa import *
 from .fas.FaMTEBRetrieval import *
