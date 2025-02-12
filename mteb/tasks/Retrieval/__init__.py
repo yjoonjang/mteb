@@ -122,6 +122,7 @@ from .eng.NQ_simplifiedRetrieval import *
 from .eng.NanoFiQA2018_ragsolutedRetrieval import *
 from .eng.NanoNQ_ragsolutedRetrieval import *
 from .eng.NanoSCIDOCS_ragsolutedRetrieval import *
+from .eng.NanoDBPedia_ragsolutedRetrieval import *
 from .est.estqa import *
 from .fas.BEIRFa import *
 from .fas.FaMTEBRetrieval import *
