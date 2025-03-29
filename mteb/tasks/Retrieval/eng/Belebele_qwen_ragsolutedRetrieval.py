@@ -6,7 +6,7 @@ from mteb.abstasks.TaskMetadata import TaskMetadata
 
 class Belebele_ragsolutedRetrieval(AbsTaskRetrieval):
     metadata = TaskMetadata(
-        name="Belebele_ragsolutedRetrieval",
+        name="Belebele_qwen_ragsolutedRetrieval",
         dataset={
             "path": "yjoonjang/belebele_ragsoluted_qwen",
             "revision": "88718673ec454b72afd285ce3ea81d9772878044",
