@@ -100,6 +100,7 @@ from .eng.TempReasonL2PureRetrieval import *
 from .eng.TempReasonL3ContextRetrieval import *
 from .eng.TempReasonL3FactRetrieval import *
 from .eng.TempReasonL3PureRetrieval import *
+from .eng.ToolRetrieval import *
 from .eng.TopiOCQARetrieval import *
 from .eng.Touche2020Retrieval import *
 from .eng.TRECCOVIDRetrieval import *
