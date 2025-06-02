@@ -120,6 +120,9 @@ from .jpn.NLPJournalTitleAbsRetrieval import *
 from .jpn.NLPJournalTitleIntroRetrieval import *
 from .kat.GeorgianFAQRetrieval import *
 from .kor.AutoRAGRetrieval import *
+from .kor.KoFinMarketReportRetrieval import *
+from .kor.KoFSSFinDictRetrieval import *
+from .kor.KoTATQARetrieval import *
 from .kor.KoStrategyQA import *
 from .multilingual.BelebeleRetrieval import *
 from .multilingual.CrossLingualSemanticDiscriminationWMT19 import *
