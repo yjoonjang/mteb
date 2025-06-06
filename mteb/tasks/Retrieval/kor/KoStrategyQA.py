@@ -15,6 +15,7 @@ class KoStrategyQA(AbsTaskRetrieval):
             "revision": "d243889a3eb6654029dbd7e7f9319ae31d58f97c",
         },
         type="Retrieval",
+        prompt="Retrieve text based on user query.",
         category="s2p",
         modalities=["text"],
         eval_splits=["dev"],
