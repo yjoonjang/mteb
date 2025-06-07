@@ -122,6 +122,7 @@ from .kat.GeorgianFAQRetrieval import *
 from .kor.AutoRAGRetrieval import *
 from .kor.KoFinMarketReportRetrieval import *
 from .kor.KoFSSFinDictRetrieval import *
+from .kor.KoSquadv1Retrieval import *
 from .kor.KoTATQARetrieval import *
 from .kor.KoStrategyQA import *
 from .multilingual.BelebeleRetrieval import *
